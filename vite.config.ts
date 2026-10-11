@@ -27,6 +27,10 @@ export default defineConfig((config) => {
     build: {
       target: 'esnext',
     },
+    server: {
+      // Allow Railway-generated public domains through Vite's host check (dev server).
+      allowedHosts: ['.up.railway.app'],
+    },
     optimizeDeps: {
       include: [
         'react',
